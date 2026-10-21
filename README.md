@@ -6,11 +6,11 @@ Personal homepage for Liqiang Dong / @Skiyo, based on the approved v8 design.
 
 - `index.html`: semantic page content and inline SVG illustrations.
 - `assets/styles.<hash>.css`: styles and responsive layout.
-- `assets/main.<hash>.js`: deferred language, theme and WeChat dialog interactions; a tiny inline head script initializes the saved theme.
+- `assets/main.<hash>.js`: deferred language, theme and WeChat popover interactions; a tiny inline head script initializes the saved theme.
 - `assets/painting-{640,1122}.<hash>.avif` / `.webp`: responsive painting, desktop only.
 - `assets/painting-fallback.<hash>.jpg`: final painting format fallback.
 - `assets/painting.<hash>.png`: original uploaded painting, retained unchanged as source.
-- `assets/wechat-qr.<hash>.webp`: lossless QR, fetched only when the dialog opens; original `.jpg` is the error fallback.
+- `assets/wechat-qr.<hash>.webp`: lossless QR, fetched eagerly with the page; original `.jpg` is the error fallback.
 - `CNAME`: custom domain `skiyo.me`.
 - `.nojekyll`: serve the plain static files without Jekyll processing.
 
@@ -48,3 +48,8 @@ do not wait for it. No framework, third-party runtime or loading animation.
 
 Keep older hashed assets for cached HTML compatibility. Update active references
 when changing content. PNG source and old files are not requested by new pages.
+
+WeChat uses a small QR-only anchored white popover: hover/focus on desktop,
+tap-to-toggle on touch, Escape/outside interaction to dismiss. The panel allows
+pointer movement from the icon and remains within viewport bounds. No modal or
+backdrop, and no separate QR preload; the image is eagerly requested once.
