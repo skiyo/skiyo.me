@@ -8,13 +8,19 @@
   <title>@Skiyo — Liqiang Dong</title>
   <link rel="icon" href="assets/favicon.a3138e294364.ico" sizes="16x16 32x32" type="image/x-icon">
   <link rel="icon" href="assets/favicon.aa636993886e.svg" sizes="any" type="image/svg+xml">
-  <script src="assets/main.35ce67944a5c.js"></script>
-  <link rel="stylesheet" href="assets/styles.1aeaa21e0b27.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('skiyo-preview-theme') === 'dark' ? 'dark' : 'light'; } catch (_) {}</script>
+  <script src="assets/main.7d9dc6cc88ff.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.d169b47da972.css">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <aside class="painting-panel" aria-label="Oil painting by my son">
-    <img id="son-painting" src="assets/painting.8f771ee8e1d4.png" alt="My son's oil painting of a flower-filled landscape beneath a colorful sky" decoding="sync">
+    <picture>
+      <source media="(min-width:1101px) and (orientation:landscape) and (hover:hover) and (pointer:fine)" type="image/avif" srcset="assets/painting-640.097c7203452a.avif 640w, assets/painting-1122.3064e0ab54e1.avif 1122w" sizes="max(30vw, 80.03vh)">
+      <source media="(min-width:1101px) and (orientation:landscape) and (hover:hover) and (pointer:fine)" type="image/webp" srcset="assets/painting-640.db0a4669f9cd.webp 640w, assets/painting-1122.b66e19386861.webp 1122w" sizes="max(30vw, 80.03vh)">
+      <source media="(min-width:1101px) and (orientation:landscape) and (hover:hover) and (pointer:fine)" type="image/jpeg" srcset="assets/painting-fallback.b4550c7d7bb5.jpg">
+      <img id="son-painting" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221%22 height=%221%22/%3E" width="1122" height="1402" alt="My son's oil painting of a flower-filled landscape beneath a colorful sky" decoding="async" fetchpriority="low">
+    </picture>
   </aside>
   <div class="wrap">
     <header class="header">
@@ -99,7 +105,7 @@
   <dialog id="wechat-dialog" class="wechat-dialog" aria-labelledby="wechat-title" aria-describedby="wechat-description">
     <button class="dialog-close" data-close aria-label="Close dialog"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
     <h2 id="wechat-title" data-i18n="wechat-title">WeChat public account</h2>
-    <div class="qr-frame"><img id="wechat-qr" src="assets/wechat-qr.c463345b4c1c.jpg" width="430" height="430" alt="WeChat public account QR code"></div>
+    <div class="qr-frame"><img id="wechat-qr" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221%22 height=%221%22/%3E" data-src="assets/wechat-qr.0611e4ba15d4.webp" data-fallback="assets/wechat-qr.c463345b4c1c.jpg" decoding="async" width="430" height="430" alt="WeChat public account QR code"></div>
     <p id="wechat-description" data-i18n="wechat-description">Scan with WeChat to follow the public account.</p>
   </dialog>
 </body>

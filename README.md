@@ -6,9 +6,11 @@ Personal homepage for Liqiang Dong / @Skiyo, based on the approved v8 design.
 
 - `index.html`: semantic page content and inline SVG illustrations.
 - `assets/styles.<hash>.css`: styles and responsive layout.
-- `assets/main.<hash>.js`: early theme initialization plus language, theme and WeChat dialog interactions.
-- `assets/painting.<hash>.png`: original uploaded painting, unchanged.
-- `assets/wechat-qr.<hash>.jpg`: original WeChat QR image, unchanged.
+- `assets/main.<hash>.js`: deferred language, theme and WeChat dialog interactions; a tiny inline head script initializes the saved theme.
+- `assets/painting-{640,1122}.<hash>.avif` / `.webp`: responsive painting, desktop only.
+- `assets/painting-fallback.<hash>.jpg`: final painting format fallback.
+- `assets/painting.<hash>.png`: original uploaded painting, retained unchanged as source.
+- `assets/wechat-qr.<hash>.webp`: lossless QR, fetched only when the dialog opens; original `.jpg` is the error fallback.
 - `CNAME`: custom domain `skiyo.me`.
 - `.nojekyll`: serve the plain static files without Jekyll processing.
 
@@ -34,3 +36,15 @@ does not configure arbitrary `Cache-Control` headers.
 
 Local `preview-v*/` directories, browser screenshots and verification records
 are not part of the released site. Stage release files explicitly.
+
+## Loading behavior
+
+Desktop picture sources match the CSS desktop-only media condition. A data-URI
+placeholder means hidden mobile, portrait and touch layouts request no painting.
+The browser selects one AVIF, WebP or JPEG resource; sizes account for cover
+height as well as the 30vw panel width and device pixel ratio. The painting
+uses low fetch priority and appears after asynchronous decode; text and controls
+do not wait for it. No framework, third-party runtime or loading animation.
+
+Keep older hashed assets for cached HTML compatibility. Update active references
+when changing content. PNG source and old files are not requested by new pages.
