@@ -1,6 +1,6 @@
 # skiyo.me
 
-Personal homepage for Liqiang Dong / @Skiyo, based on the approved v8 design.
+Skiyo’s portfolio, built as a small static website.
 
 ## Structure
 
@@ -46,10 +46,17 @@ height as well as the 30vw panel width and device pixel ratio. The painting
 uses low fetch priority and appears after asynchronous decode; text and controls
 do not wait for it. No framework, third-party runtime or loading animation.
 
-Keep older hashed assets for cached HTML compatibility. Update active references
-when changing content. PNG source and old files are not requested by new pages.
+Update active hashed references when changing content. Retired JavaScript bundles
+with outdated profile copy have been removed from the current published tree.
+The original PNG source is not requested by the live page.
 
 WeChat uses a small QR-only anchored white popover: hover/focus on desktop,
 tap-to-toggle on touch, Escape/outside interaction to dismiss. The panel allows
 pointer movement from the icon and remains within viewport bounds. No modal or
 backdrop, and no separate QR preload; the image is eagerly requested once.
+
+## Public identity
+
+Use Skiyo in public-facing copy, @Skiyo for the visible page heading, and
+@Skiyo’s Portfolio for the browser tab and social share titles. Published
+files should not include private contact details, location or family context.
