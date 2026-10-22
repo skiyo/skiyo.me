@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark light">
   <meta name="description" content="@Skiyo — A selection of personal projects.">
   <title>@Skiyo — Liqiang Dong</title>
   <link rel="icon" href="assets/favicon.a3138e294364.ico" sizes="16x16 32x32" type="image/x-icon">
   <link rel="icon" href="assets/favicon.aa636993886e.svg" sizes="any" type="image/svg+xml">
-  <script>try { document.documentElement.dataset.theme = localStorage.getItem('skiyo-preview-theme') === 'dark' ? 'dark' : 'light'; } catch (_) {}</script>
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('skiyo-preview-theme') === 'light' ? 'light' : 'dark'; } catch (_) {}</script>
+  <style data-theme-init>html{background:#18181B;color-scheme:dark}html[data-theme="light"]{background:#FFFFFF;color-scheme:light}</style>
   <script src="assets/main.b29dd3e09c8a.js" defer></script>
   <link rel="stylesheet" href="assets/styles.25791da32875.css">
 </head>
@@ -42,7 +43,7 @@
         <div class="lang" role="group" aria-label="Language">
           <button id="lang-en" lang="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button id="lang-zh" lang="zh-CN" aria-pressed="false">中文</button>
         </div>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="true">
           <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 14A8.9 8.9 0 0 1 10 3.3 9 9 0 1 0 20.7 14Z"/></svg>
           <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
         </button>
