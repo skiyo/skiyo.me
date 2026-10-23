@@ -59,4 +59,6 @@ backdrop, and no separate QR preload; the image is eagerly requested once.
 
 Use Skiyo in public-facing copy, @Skiyo for the visible page heading, and
 @Skiyo’s Portfolio for the browser tab and social share titles. Published
-files should not include private contact details, location or family context.
+files should not include private contact details, location or identifying
+details about family members. The approved artwork credit may say “my son”
+without a name or other personal details.
